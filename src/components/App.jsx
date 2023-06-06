@@ -1,9 +1,13 @@
 import { NavLink, Route, Routes } from 'react-router-dom';
 import { HomeContainer, NavLinkList, NavLinkItem } from './App.styled';
 import Home from '../pages/homePage/HomePage';
+import MoviesSearch from 'pages/moviesSearch/MoviesSearch';
+
+
 export const App = () => {
   return (
-    <HomeContainer>
+    <>
+      <HomeContainer>
       <NavLinkList>
         <NavLinkItem>
           <NavLink to="/">Home</NavLink>
@@ -14,8 +18,10 @@ export const App = () => {
       </NavLinkList>
       <Routes>
         <Route path="/" element={<Home/>} />
-        <Route path="/movies" element={<div>Movies</div>} />
+        <Route path="/movies" element={<MoviesSearch/>} />
       </Routes>
     </HomeContainer>
+    </>
+    
   );
 };

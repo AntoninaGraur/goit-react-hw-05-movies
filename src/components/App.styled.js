@@ -6,7 +6,6 @@ export const HomeContainer = styled.div`
 
 export const NavLinkList = styled.ul`
   list-style: none;
-
   display: flex;
 `;
 
