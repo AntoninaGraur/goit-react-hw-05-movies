@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { fetchFilmsById } from '../../apiMovie/ApiMovie';
 // import { Icon } from './movies.styled';
 import { DetailsDiv,TextContainer, AddIndorm,GoBckkBtn} from './moviesDetails.styled';
-
+import { CastRewLinks, CastRewList } from './cast/cast.styled';
 const MovieDetails = () => {
   const [movie, setMovie] = useState({});
 
@@ -62,16 +62,16 @@ const MovieDetails = () => {
         <AddIndorm>
           <h3>Additional information</h3>
           <ul>
-            <li>
-              <NavLink to="cast" state={{ from: backLocation }}>
+            <CastRewList>
+              <CastRewLinks to="cast" state={{ from: backLocation }}>
                 Cast
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="reviews" state={{ from: backLocation }}>
+              </CastRewLinks>
+            </CastRewList>
+            <CastRewList>
+              <CastRewLinks to="reviews" state={{ from: backLocation }}>
                 Reviews
-              </NavLink>
-            </li>
+              </CastRewLinks>
+            </CastRewList>
           </ul>
         </AddIndorm>
         <Suspense fallback={<div>Loading...</div>}>
